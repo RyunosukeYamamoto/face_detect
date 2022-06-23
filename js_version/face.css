@@ -1,0 +1,47 @@
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1rem;
+  color: #000;
+  background: #fff;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0;
+  color: red;
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 1rem;
+}
+
+.preview > div {
+  border-right: 1rem solid #fff;  /* Force Margin */
+}
+
+#video {
+  background: #ffc;
+}
+
+#canvas {
+  background: #cff;
+}
+
+#error-message {
+  color: #f00;
+}

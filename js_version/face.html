@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>face-detect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./face.css">
+  </head>
+  <body>
+
+<h1>Face detect</h1>
+<p>
+  <button id="start" type="button" class="btn btn-success" disabled>Start</button>
+  <button id="stop" type="button" class="btn btn-danger" disabled>Stop</button>
+  <span id="status">Initializing...</span>
+  <span id="error-message"></span>
+</p>
+
+<div class="preview">
+  <div>
+    <h2>Raw Video</h2>
+    <div><video id="video" width="640" height="480" playsinline muted autoplay></video></div>
+  </div>
+  <div>
+    <h2>OpenCV Canvas (Face Detection)</h2>
+    <div><canvas id="canvas" width="640" height="480"></canvas></div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+<!-- https://docs.opencv.org/3.4.0/utils.js -->
+<script src="./utils.js"></script>
+<!-- https://docs.opencv.org/3.4.0/opencv.js -->
+<script src="./opencv.js" onload="onCvLoaded();"></script>
+<script src="./face.js">
+</script>
+
+  </body>
+</html>
